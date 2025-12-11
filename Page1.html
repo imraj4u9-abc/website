@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaitanya Raj Corporation</title>
+  <style>
+    :root{
+      --bg:#f6fbff;
+      --accent1:#ff6b6b; /* color for C */
+      --accent2:#4ecdc4; /* color for R */
+      --text:#0f1724;
+      --muted:#40505f;
+      --card:#ffffff;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:Inter, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg,var(--bg),#ffffff);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(18,38,63,0.06);
+      padding:28px 32px;
+      max-width:880px;
+      width:100%;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      border:1px solid rgba(9,30,66,0.04);
+    }
+
+    /* logo block */
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:160px;
+    }
+
+    .squares{
+      display:flex;
+      gap:6px;
+      align-items:center;
+    }
+
+    .sq{
+      width:46px;
+      height:46px;
+      display:inline-grid;
+      place-items:center;
+      color:white;
+      font-weight:700;
+      font-size:20px;
+      border-radius:8px;
+      box-shadow:0 6px 14px rgba(11,22,40,0.12);
+      transform-origin:center;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .sq.c { background: linear-gradient(135deg,var(--accent1), #ff8e72); }
+    .sq.r { background: linear-gradient(135deg,var(--accent2), #2fbeb3); }
+
+    .sq:hover{ transform:translateY(-4px) scale(1.03); box-shadow:0 14px 30px rgba(11,22,40,0.16); }
+
+    .title {
+      display:flex;
+      flex-direction:column;
+    }
+
+    h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:0.2px;
+      color:var(--text);
+    }
+
+    .sub{
+      margin-top:6px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* content area */
+    .content{
+      padding-left:6px;
+      flex:1;
+    }
+
+    p.lead{
+      margin:0 0 10px 0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    p.small{
+      margin:0;
+      font-size:13px;
+      color:#6b7785;
+    }
+
+    /* responsive */
+    @media (max-width:640px){
+      .card{flex-direction:column; align-items:stretch; gap:18px;}
+      .logo{justify-content:flex-start;}
+      .content{padding-left:0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card" aria-label="Chaitanya Raj Corporation header">
+      <div class="logo" aria-hidden="false">
+        <div class="squares" role="img" aria-label="Logo showing letters C and R in colored squares">
+          <div class="sq c" title="C">C</div>
+          <div class="sq r" title="R">R</div>
+        </div>
+
+        <div class="title">
+          <h1>Chaitanya Raj Corporation</h1>
+          <div class="sub">Trust • Friendship • Partnership</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p class="lead">
+          Chaitanya and Raj started as friends with a shared spark — a love for bold ideas and quiet
+          afternoon talks. Over time their trust grew into a partnership built on honesty, loyalty,
+          and the willingness to help each other through wins and setbacks.
+        </p>
+
+        <p class="small">
+          Together they founded this corporation to turn friendship into a positive force that
+          helps others — combining complementary strengths and always keeping mutual respect first.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
